@@ -8,6 +8,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { CarFormComponent } from './components/car-form/car-form.component';
 import { CarTableComponent } from './components/car-table/car-table.component';
 import { CarsComponent } from './pages/cars/cars.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CarsComponent } from './pages/cars/cars.component';
     HeaderComponent,
     CarFormComponent,
     CarTableComponent,
-    CarsComponent
+    CarsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
