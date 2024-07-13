@@ -1,4 +1,4 @@
 <div class="container bg-light p-5">
-  <app-car-form></app-car-form>
-  <app-car-table></app-car-table>
+  <app-car-form [car]="carForm" (saveEmitter)="saveCar()"></app-car-form>
+  <app-car-table [cars]="cars"></app-car-table>
 </div>

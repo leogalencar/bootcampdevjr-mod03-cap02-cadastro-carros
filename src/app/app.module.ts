@@ -9,6 +9,7 @@ import { CarFormComponent } from './components/car-form/car-form.component';
 import { CarTableComponent } from './components/car-table/car-table.component';
 import { CarsComponent } from './pages/cars/cars.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FooterComponent } from './components/footer/footer.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
