@@ -54,4 +54,8 @@ export class CarsComponent {
     this.isUpdate = true;
     this.carForm = car;
   }
+
+  removeCar(car: ICar) {
+    this.cars = this.cars.filter(c => c !== car);
+  }
 }

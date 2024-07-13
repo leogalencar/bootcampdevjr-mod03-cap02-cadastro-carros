@@ -11,8 +11,13 @@ export class CarTableComponent {
   @Input() carForm: ICar = {} as ICar;
 
   @Output() updateEmitter = new EventEmitter();
+  @Output() removeEmitter = new EventEmitter();
 
   update(car: ICar) {
     this.updateEmitter.emit(car);
+  }
+
+  remove(car: ICar) {
+    this.removeEmitter.emit(car);
   }
 }
