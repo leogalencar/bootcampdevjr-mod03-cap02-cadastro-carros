@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ICar } from '../../models/Car';
 
 @Component({
@@ -8,4 +8,11 @@ import { ICar } from '../../models/Car';
 })
 export class CarTableComponent {
   @Input() cars: ICar[] = {} as ICar[];
+  @Input() carForm: ICar = {} as ICar;
+
+  @Output() updateEmitter = new EventEmitter();
+
+  update(car: ICar) {
+    this.updateEmitter.emit(car);
+  }
 }

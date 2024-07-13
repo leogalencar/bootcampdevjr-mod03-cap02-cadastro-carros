@@ -13,7 +13,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr class="align-middle" *ngFor="let car of cars">
+      <tr class="align-middle" *ngFor="let car of cars" [ngClass]="{'table-primary': car.id === carForm.id}">
         <th>{{ car.id }}</th>
         <td>{{ car.name }}</td>
         <td>{{ car.manufacturer }}</td>
@@ -21,7 +21,7 @@
         <td>{{ car.year }}</td>
         <td>
           <div class="d-flex gap-2 justify-content-end">
-            <button class="btn btn-success">Alterar</button>
+            <button class="btn btn-success" (click)="update(car)">Alterar</button>
             <button class="btn btn-danger">Remover</button>
           </div>
         </td>
