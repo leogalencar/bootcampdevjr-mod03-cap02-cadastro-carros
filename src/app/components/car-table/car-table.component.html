@@ -13,12 +13,12 @@
       </tr>
     </thead>
     <tbody>
-      <tr class="align-middle">
-        <th>1</th>
-        <td>Palio</td>
-        <td>Fiat</td>
-        <td>30000</td>
-        <td>2000</td>
+      <tr class="align-middle" *ngFor="let car of cars">
+        <th>{{ car.id }}</th>
+        <td>{{ car.name }}</td>
+        <td>{{ car.manufacturer }}</td>
+        <td>{{ car.price }}</td>
+        <td>{{ car.year }}</td>
         <td>
           <div class="d-flex gap-2 justify-content-end">
             <button class="btn btn-success">Alterar</button>
