@@ -1,5 +1,5 @@
+import { ICar } from './../../models/Car';
 import { Component } from '@angular/core';
-import { ICar } from '../../models/Car';
 
 @Component({
   selector: 'app-cars',
@@ -57,5 +57,7 @@ export class CarsComponent {
 
   removeCar(car: ICar) {
     this.cars = this.cars.filter(c => c !== car);
+
+    this.carForm = {} as ICar;
   }
 }
